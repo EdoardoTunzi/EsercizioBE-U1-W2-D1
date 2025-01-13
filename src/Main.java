@@ -1,3 +1,4 @@
+import be.Esercizi.esercizio3.BancaException;
 import be.Esercizi.esercizio3.ContoCorrente;
 import be.Esercizi.esercizio3.ContoOnLine;
 
@@ -13,6 +14,20 @@ public class Main {
         System.out.println("1- Conto corrente, 2- Conto OnLine");
         int selezione = scanner.nextInt();
 
+
+
+        try {
+            conto1.preleva(50);
+        } catch (BancaException e) {
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            contoOnline.preleva(50);
+            contoOnline.restituisciSaldo();
+        } catch (BancaException e) {
+            System.out.println(e.getMessage());
+        }
 
     }
 }

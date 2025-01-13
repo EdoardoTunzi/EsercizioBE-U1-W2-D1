@@ -2,10 +2,10 @@ package be.Esercizi.esercizio3;
 
 public class ContoCorrente {
 
-    String titolare;
-     int nMovimenti;
-     final int maxMovimenti = 50;
-     double saldo;
+   protected String titolare;
+   protected int nMovimenti;
+   protected final int maxMovimenti = 50;
+   protected double saldo;
 
     public ContoCorrente(String titolare, double saldo) {
         this.titolare = titolare;
